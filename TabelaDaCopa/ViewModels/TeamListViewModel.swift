@@ -72,4 +72,25 @@ public final class TeamListViewModel {
         return teamsFromSelectedGroup
     }
 
+    public func getNumberOfTeamsInAGroup(for group: String) -> Int {
+        let teams = self.getTeamsFromAGroup(group: group)
+        return teams.count
+    }
+
+    func getAnArrayOfAllGroups() -> [Group] {
+        let arrayOfGroupsNames: [String] = ["A", "B", "C", "D", "E", "F", "G", "H"]
+        var arrayOfGroups: [Group] = []
+        var arrayOfTeams: [String] = []
+        let arrayOfAllTeams = self.teamList
+        for indexI in 0..<8 {
+            for indexJ in arrayOfAllTeams where indexJ.group == arrayOfGroupsNames[indexI] {
+                arrayOfTeams.append(indexJ.team)
+            }
+            arrayOfGroups.append(Group(name: arrayOfGroupsNames[indexI], teams: arrayOfTeams))
+            arrayOfTeams = []
+        }
+
+        return arrayOfGroups
+    }
+
 }

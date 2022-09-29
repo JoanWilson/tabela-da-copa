@@ -39,14 +39,25 @@ public final class TeamListViewControllerTests: XCTestCase {
     }
 
     public func test_TeamListTableViewNumberOfRowsInSection_ShouldReturn32() {
-        let numberOfRowsInSection = TeamListViewModel().teamList.count
+        let arrayOfGroups: [String] = ["A", "B", "C", "D", "E", "F", "G", "H"]
+        var numberOfRowsInSection: Int!
+        for index in 0..<8 {
+            numberOfRowsInSection = TeamListViewModel().getNumberOfTeamsInAGroup(for: arrayOfGroups[index])
+            _ = sut.view
+            sut.viewDidLoad()
+            let result = sut.tableViewTeamList.dataSource?.tableView(
+                sut.tableViewTeamList,
+                numberOfRowsInSection: numberOfRowsInSection
+            )
+            XCTAssertEqual(result, 4)
+        }
+    }
+
+    public func test_TeamListTableViewNumberOfSection_ShouldReturn8() {
         _ = sut.view
         sut.viewDidLoad()
-        let result = sut.tableViewTeamList.dataSource?.tableView(
-            sut.tableViewTeamList,
-            numberOfRowsInSection: numberOfRowsInSection
-        )
-        XCTAssertEqual(result, 32)
+        let result = sut.numberOfSections(in: sut.tableViewTeamList)
+        XCTAssertEqual(result, 8)
     }
 
 }
