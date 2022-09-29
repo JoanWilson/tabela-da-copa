@@ -1,0 +1,162 @@
+[
+  {
+    "Team": "Senegal",
+    "Group": "A",
+    "FlagIcon": "🇸🇳"
+  },
+  {
+    "Team": "Qatar",
+    "Group": "A",
+    "FlagIcon": "🇶🇦"
+  },
+  {
+    "Team": "Netherlands",
+    "Group": "A",
+    "FlagIcon": "🇳🇱"
+  },
+  {
+    "Team": "Ecuador",
+    "Group": "A",
+    "FlagIcon": "🇪🇨"
+  },
+  {
+    "Team": "Iran",
+    "Group": "B",
+    "FlagIcon": "🇮🇷"
+  },
+  {
+    "Team": "England",
+    "Group": "B",
+    "FlagIcon": "🏴󠁧󠁢󠁥󠁮󠁧󠁿"
+  },
+  {
+    "Team": "USA",
+    "Group": "B",
+    "FlagIcon": "🇺🇸"
+  },
+  {
+    "Team": "Wales",
+    "Group": "B",
+    "FlagIcon": "🏴󠁧󠁢󠁷󠁬󠁳󠁿"
+  },
+  {
+    "Team": "Argentina",
+    "Group": "C",
+    "FlagIcon": "🇦🇷"
+  },
+  {
+    "Team": "Saudi Arabia",
+    "Group": "C",
+    "FlagIcon": "🇸🇦"
+  },
+  {
+    "Team": "Mexico",
+    "Group": "C",
+    "FlagIcon": "🇲🇽"
+  },
+  {
+    "Team": "Poland",
+    "Group": "C",
+    "FlagIcon": "🇵🇱"
+  },
+  {
+    "Team": "Denmark",
+    "Group": "D",
+    "FlagIcon": "🇩🇰"
+  },
+  {
+    "Team": "Tunisia",
+    "Group": "D",
+    "FlagIcon": "🇸🇳"
+  },
+  {
+    "Team": "France",
+    "Group": "D",
+    "FlagIcon": "🇫🇷"
+  },
+  {
+    "Team": "Australia",
+    "Group": "D",
+    "FlagIcon": "🇦🇺"
+  },
+  {
+    "Team": "Germany",
+    "Group": "E",
+    "FlagIcon": "🇩🇪"
+  },
+  {
+    "Team": "Japan",
+    "Group": "E",
+    "FlagIcon": "🇯🇵"
+  },
+  {
+    "Team": "Spain",
+    "Group": "E",
+    "FlagIcon": "🇪🇸"
+  },
+  {
+    "Team": "Costa Rica",
+    "Group": "E",
+    "FlagIcon": "🇨🇷"
+  },
+  {
+    "Team": "Morocco",
+    "Group": "F",
+    "FlagIcon": "🇲🇦"
+  },
+  {
+    "Team": "Croatia",
+    "Group": "F",
+    "FlagIcon": "🇭🇷"
+  },
+  {
+    "Team": "Belgium",
+    "Group": "F",
+    "FlagIcon": "🇧🇪"
+  },
+  {
+    "Team": "Canada",
+    "Group": "F",
+    "FlagIcon": "🇨🇦"
+  },
+  {
+    "Team": "Switzerland",
+    "Group": "G",
+    "FlagIcon": "🇨🇭"
+  },
+  {
+    "Team": "Cameroon",
+    "Group": "G",
+    "FlagIcon": "🇨🇲"
+  },
+  {
+    "Team": "Brazil",
+    "Group": "G",
+    "FlagIcon": "🇧🇷"
+  },
+  {
+    "Team": "Serbia",
+    "Group": "G",
+    "FlagIcon": "🇷🇸"
+  },
+  {
+    "Team": "Uruguay",
+    "Group": "H",
+    "FlagIcon": "🇺🇾"
+  },
+  {
+    "Team": "South Korea",
+    "Group": "H",
+    "FlagIcon": "🇰🇷"
+  },
+  {
+    "Team": "Portugal",
+    "Group": "H",
+    "FlagIcon": "🇵🇹"
+  },
+  {
+    "Team": "Ghana",
+    "Group": "H",
+    "FlagIcon": "🇬🇭"
+  }
+]
