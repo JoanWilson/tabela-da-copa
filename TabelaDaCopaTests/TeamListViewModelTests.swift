@@ -62,4 +62,15 @@ public final class TeamListViewModelTests: XCTestCase {
         XCTAssertEqual(teams, [])
     }
 
+    public func test_getAnArrayOfAllGroups_ShouldReturnAnArrayNotNil() {
+        let arrayOfGroups: [Group] = sut.getAnArrayOfAllGroups()
+        XCTAssertNotNil(arrayOfGroups)
+    }
+
+    public func test_getNumberOfTeamAllGroups_ShouldReturn4() {
+        let numberOfTeams: Int = sut.getNumberOfTeamsInAGroup(for: "A")
+        XCTAssertEqual(numberOfTeams, 4)
+
+    }
+
 }

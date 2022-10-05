@@ -60,4 +60,20 @@ public final class TeamListViewControllerTests: XCTestCase {
         XCTAssertEqual(result, 8)
     }
 
+    public func test_didSelectRowAt_MustRedirectToSelectedView() {
+        _ = sut.view
+        sut.viewDidLoad()
+        var indexPathSelected = IndexPath(row: 0, section: 0)
+
+        for indexI in 0..<8 {
+            indexPathSelected = IndexPath(row: 0, section: indexI)
+            sut.tableViewTeamList.delegate?.tableView?(sut.tableViewTeamList, didSelectRowAt: indexPathSelected)
+            let result: Void = sut.tableViewTeamList.selectRow(
+                at: indexPathSelected,
+                animated: true, scrollPosition: .top
+            )
+            XCTAssertNotNil(result)
+        }
+    }
+
 }

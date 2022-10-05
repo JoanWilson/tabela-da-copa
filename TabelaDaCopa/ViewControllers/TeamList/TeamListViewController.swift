@@ -7,9 +7,10 @@
 
 import UIKit
 
-class TeamListViewController: UIViewController {
+final class TeamListViewController: UIViewController {
 
     public var viewModel: TeamListViewModel = TeamListViewModel()
+    public var matches: [Match]?
 
     public lazy var tableViewTeamList: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
@@ -25,5 +26,13 @@ class TeamListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buildLayout()
+
+        MatchesClient().fetchMatches { [weak self] (matches) in
+            self?.matches = matches
+            DispatchQueue.main.async {
+                print(matches)
+            }
+        }
     }
+
 }

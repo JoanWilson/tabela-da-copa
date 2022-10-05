@@ -23,11 +23,13 @@ public final class TeamListViewModel {
     private let jsonDecoder: JSONDecoder!
     public var jsonFileName: String!
     public var jsonFileExtension: String!
+    public var sectionsOfGroups: [Section] = [Section]()
 
     init() {
         self.jsonDecoder = JSONDecoder()
         self.jsonFileName = "GroupTeams"
         self.jsonFileExtension = "json"
+        self.populateArrayOfSections()
     }
 
     public var teamList: Teams {
@@ -56,7 +58,6 @@ public final class TeamListViewModel {
 
             return teams
         } catch {
-
             return []
         }
     }
@@ -77,20 +78,30 @@ public final class TeamListViewModel {
         return teams.count
     }
 
-    func getAnArrayOfAllGroups() -> [Group] {
+    public func getAnArrayOfAllGroups() -> [Group] {
         let arrayOfGroupsNames: [String] = ["A", "B", "C", "D", "E", "F", "G", "H"]
         var arrayOfGroups: [Group] = []
         var arrayOfTeams: [String] = []
+        var arrayOfFlags: [String] = []
         let arrayOfAllTeams = self.teamList
         for indexI in 0..<8 {
             for indexJ in arrayOfAllTeams where indexJ.group == arrayOfGroupsNames[indexI] {
                 arrayOfTeams.append(indexJ.team)
+                arrayOfFlags.append(indexJ.flagIcon)
             }
-            arrayOfGroups.append(Group(name: arrayOfGroupsNames[indexI], teams: arrayOfTeams))
+            arrayOfGroups.append(Group(name: arrayOfGroupsNames[indexI], teams: arrayOfTeams, flags: arrayOfFlags))
             arrayOfTeams = []
+            arrayOfFlags = []
         }
 
         return arrayOfGroups
+    }
+
+    public func populateArrayOfSections() {
+        let arrayOfAllGroups = self.getAnArrayOfAllGroups()
+        for index in arrayOfAllGroups {
+            self.sectionsOfGroups.append(Section(group: index.name, teams: index.teams, teamsFlags: index.flags))
+        }
     }
 
 }

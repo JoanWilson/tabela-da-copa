@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct Group {
+public struct Group {
     let name: String
     let teams: [String]
+    let flags: [String]
 }
